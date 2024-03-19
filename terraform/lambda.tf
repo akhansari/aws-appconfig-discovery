@@ -7,8 +7,8 @@ locals {
 
 data "archive_file" "tsfunc" {
   type        = "zip"
-  source_file = "../src/tsfunc/dist/lambda.js"
-  output_path = "../src/tsfunc/dist/lambda.zip"
+  source_file = "../src/lambda.ts"
+  output_path = "../dist/lambda.zip"
 }
 
 resource "aws_lambda_function" "tsfunc" {
